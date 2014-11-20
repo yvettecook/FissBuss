@@ -2,14 +2,17 @@ import unittest
 
 # Unit
 
+def isDivisibleBy(number, divisor):
+    return number % divisor == 0
+
 def isDivisibleByThree(number):
-    return number % 3 == 0
+    return isDivisibleBy(number, 3)
 
 def isDivisibleByFive(number):
-    return number % 5 == 0
+    return isDivisibleBy(number, 5)
 
 def isDivisibleByFifteen(number):
-    return number % 15 == 0
+    return isDivisibleBy(number, 15)
 
 
 # Unit Tests
