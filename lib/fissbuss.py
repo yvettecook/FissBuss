@@ -14,6 +14,10 @@ def isDivisibleByFive(number):
 def isDivisibleByFifteen(number):
     return isDivisibleBy(number, 15)
 
+def fissBuss(number):
+    if isDivisibleByThree(number):
+        return 'fiss'
+
 
 # Unit Tests
 
@@ -36,6 +40,10 @@ class FissBussTests(unittest.TestCase):
 
     def testIsNotDivisibleByFifteen(self):
         self.assertFalse(isDivisibleByFifteen(1))
+
+    def testSayThreeFissBuss(self):
+        self.assertEqual('fiss', fissBuss(3))
+    
 
 def main():
     unittest.main()
