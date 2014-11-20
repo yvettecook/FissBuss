@@ -6,7 +6,7 @@ def isDivisibleByThree(number):
     return number % 3 == 0
 
 def isDivisibleByFive(number):
-    return True
+    return number % 5 == 0
 
 
 # Unit Tests
@@ -22,6 +22,8 @@ class FissBussTests(unittest.TestCase):
     def testIsDivisibleByFive(self):
         self.assertTrue(isDivisibleByFive(5))
 
+    def testIsNotDivisibleByFive(self):
+        self.assertFalse(isDivisibleByFive(1))
 
 def main():
     unittest.main()
